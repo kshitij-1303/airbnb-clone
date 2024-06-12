@@ -7,35 +7,35 @@
   <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
 
     <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
+      <label for="title" class="form-label fw-bold">Title</label>
       <input placeholder="title" name="title" type="text" value="<%=listing.title%>" class="form-control">
     </div>
 
     <div class="mb-3">
-      <label for="description" class="form-label">Description</label>
+      <label for="description" class="form-label fw-bold">Description</label>
       <textarea name="description" placeholder="New description"  class="form-control" type="text" ><%=listing.description%></textarea>
     </div>
 
     <div class="mb-3">
-      <label for="image" class="form-label">Image</label>
+      <label for="image" class="form-label fw-bold">Image</label>
       <input placeholder="Enter image URL" name="image" class="form-control" value="<%=listing.image%>">
     </div>
 
 
     <div class="row">
       <div class="mb-3 col-md-4">
-        label for="price" class="form-label">Price</label>
+        <label for="price" class="form-label fw-bold">Price</label>
       <input placeholder="New price" name="price" type="text" class="form-control" value="<%=listing.price%>">
       </div>
   
       <div class="mb-3 col-md-8">
-        <label for="country" class="form-label">Country</label>
+        <label for="country" class="form-label fw-bold">Country</label>
       <input placeholder="location" name="location" type="text" class="form-control" value="<%=listing.location%>">
       </div>
     </div>
 
     <div class="mb-3">
-      <label for="location" class="form-label">Location</label>
+      <label for="location" class="form-label fw-bold">Location</label>
       <input placeholder="country" name="country" type="text" class="form-control" value="<%=listing.country%>">
     </div>
 
