@@ -29,7 +29,9 @@ async function main() {
 }
 
 app.get("/", (req, res) => {
-  res.send("welcome");
+  res.send(
+    '<a style="text-decoration: none; font-size: 2rem" href="/listings">Go to all listings</a>'
+  );
 });
 
 // Index route
