@@ -1,27 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wanderlust</title>
-</head>
+<% layout("/layouts/boilerplate") %>
+
 <body>
+
+  <div class="row">
+    <div class="col-8 offset-2">
   <h3>Create new listing</h3>
 
   <form method="POST" action="/listings">
-    <input name="title" placeholder="Enter title" type="text">
-    <br>
-    <textarea name="description" placeholder="Enter description" type="text"></textarea>
-    <br>
-    <input name="image" placeholder="Enter image URL">
-    <br>
-    <input name="price" placeholder="Enter price" type="number" >
-    <br>
-    <input name="location" placeholder="Enter location" type="text">
-    <br>
-    <input name="country" placeholder="Enter country" type="text">
-    <br>
-    <button>Add</button>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input name="title" placeholder="Enter title" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea name="description" placeholder="Enter description" type="text" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+      <input name="image" placeholder="Enter image URL" class="form-control">
+    </div>
+
+    <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input name="price" placeholder="Enter price" type="number"  class="form-control">
+      </div>
+  
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+        <input name="country" placeholder="Enter country" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input name="location" placeholder="Enter location" type="text" class="form-control" >
+    </div>
+
+    <button class="btn btn-dark mb-3 add-btn">Add</button>
   </form>
+  </div>
+  </div>
 </body>
-</html>

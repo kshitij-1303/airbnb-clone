@@ -1,26 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wanderlust</title>
-</head>
+<% layout("/layouts/boilerplate") %>
+
 <body>
+  <div class="row">
+    <div class="col-8 offset-2">
   <h3>Edit listing</h3>
   <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
-    <input placeholder="title" name="title" type="text" value="<%=listing.title%>">
-    <br>
-    <textarea name="description" placeholder="New description" type="text" value="<%=listing.description%>"></textarea>
-    <br>
-    <input placeholder="Enter image URL" name="image" value="<%=listing.image%>">
-    <br>
-    <input placeholder="New price" name="price" type="text" value="<%=listing.price%>">
-    <br>
-    <input placeholder="location" name="location" type="text" value="<%=listing.location%>">
-    <br>
-    <input placeholder="country" name="country" type="text" value="<%=listing.country%>">
-    <br>
-    <button>Add</button>
+
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input placeholder="title" name="title" type="text" value="<%=listing.title%>" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea name="description" placeholder="New description"  class="form-control" type="text" ><%=listing.description%></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+      <input placeholder="Enter image URL" name="image" class="form-control" value="<%=listing.image%>">
+    </div>
+
+
+    <div class="row">
+      <div class="mb-3 col-md-4">
+        label for="price" class="form-label">Price</label>
+      <input placeholder="New price" name="price" type="text" class="form-control" value="<%=listing.price%>">
+      </div>
+  
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+      <input placeholder="location" name="location" type="text" class="form-control" value="<%=listing.location%>">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input placeholder="country" name="country" type="text" class="form-control" value="<%=listing.country%>">
+    </div>
+
+    <button class="btn btn-dark edit-btn mb-3">Add</button>
   </form>
+  </div>
+  </div>
 </body>
-</html>
