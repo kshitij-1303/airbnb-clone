@@ -4,39 +4,45 @@
   <div class="row">
     <div class="col-8 offset-2">
   <h3>Edit listing</h3>
-  <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
+  <form method="POST" class="needs-validation" action="/listings/<%=listing._id%>?_method=PUT" novalidate>
 
     <div class="mb-3">
       <label for="title" class="form-label fw-bold">Title</label>
-      <input placeholder="title" name="title" type="text" value="<%=listing.title%>" class="form-control">
+      <input placeholder="title" name="title" type="text" value="<%=listing.title%>" required class="form-control">
+      <div class="invalid-feedback">Please enter a valid title</div>
     </div>
 
     <div class="mb-3">
       <label for="description" class="form-label fw-bold">Description</label>
-      <textarea name="description" placeholder="New description"  class="form-control" type="text" ><%=listing.description%></textarea>
+      <textarea name="description" placeholder="New description" required  class="form-control" type="text" ><%=listing.description%></textarea>
+      <div class="invalid-feedback">Please enter a valid description</div>
+
     </div>
 
     <div class="mb-3">
       <label for="image" class="form-label fw-bold">Image</label>
-      <input placeholder="Enter image URL" name="image" class="form-control" value="<%=listing.image%>">
+      <input placeholder="Enter image URL" required name="image"  class="form-control" value="<%=listing.image%>">
     </div>
 
 
     <div class="row">
       <div class="mb-3 col-md-4">
         <label for="price" class="form-label fw-bold">Price</label>
-      <input placeholder="New price" name="price" type="text" class="form-control" value="<%=listing.price%>">
+      <input placeholder="New price" name="price"  required class="form-control" value="<%=listing.price%>">
+      <div class="invalid-feedback">Please enter a valid price</div>
       </div>
   
       <div class="mb-3 col-md-8">
         <label for="country" class="form-label fw-bold">Country</label>
-      <input placeholder="location" name="location" type="text" class="form-control" value="<%=listing.location%>">
+      <input placeholder="location" name="location" type="text" required class="form-control" value="<%=listing.location%>">
+      <div class="invalid-feedback">Please enter a valid country</div>
       </div>
     </div>
 
     <div class="mb-3">
       <label for="location" class="form-label fw-bold">Location</label>
-      <input placeholder="country" name="country" type="text" class="form-control" value="<%=listing.country%>">
+      <input placeholder="country" name="country" type="text" required class="form-control" value="<%=listing.country%>">
+      <div class="invalid-feedback">Please enter a valid location</div>
     </div>
 
     <button class="btn btn-dark edit-btn mb-3">Add</button>

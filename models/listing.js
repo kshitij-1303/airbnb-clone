@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const listingSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    requred: true,
   },
   description: String,
   image: {
